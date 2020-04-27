@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Coding Standard">
+    <description>Coding Standard</description>
+    <!-- Display Progress -->
+    <arg value="p"/>
+    <!-- Use Colorized Output -->
+    <arg name="colors"/>
+    <!-- Show Sniff -->
+    <arg value="s"/>
+    <!-- Rule Set -->
+    <rule ref="PSR2">
+        <!-- preventing duplicate class name -->
+         <rule ref="Generic.Classes.DuplicateClassName"/>
+        <!-- must be have line ending -->
+        <!-- <rule ref="Generic.Files.LineEndings"/> -->
+        <rule ref="Generic.Files.LineEndings"/>
+    </rule>
+    <!-- array must be use short syntax array() == [] -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Internal.NoCodeFound">
+        <!-- ignore code on inc on -->
+        <exclude-pattern>src/*.inc</exclude-pattern>
+    </rule>
+    <!-- Path To Check -->
+    <file>src</file>
+</ruleset>
